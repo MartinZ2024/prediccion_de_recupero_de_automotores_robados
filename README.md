@@ -49,8 +49,11 @@ Para garantizar el rigor metodológico y la prevención de sesgos en el entrenam
 * **Preprocesamiento Aislado:** Todas las transformaciones (imputación con `SimpleImputer`, escalado con `StandardScaler` y codificación con `OneHotEncoder`) se integran dentro de un `Pipeline` y un `ColumnTransformer` que se ajustan (`fit`) **exclusivamente sobre el conjunto de entrenamiento (X_train)**.
 ### 5. Modelos preliminares propuestos
 a. Regresión logística:
+
 Funcionamiento: Estima la probabilidad continua de pertenecer a la clase recuperada a través de la combinación lineal ponderada de las características y la aplicación de la función sigmoide. Permite interpretar el impacto y dirección de cada variable mediante sus coeficientes beta.
+
 b. Árbol de decisión:
+
 Funcionamiento: Construye particiones lógicas recursivas evaluando umbrales de división que maximicen la pureza de los nodos. Se aplicarán hiperparámetros de poda previa para controlar y mitigar el sobreajuste.
 
 ### 🗂️ Diccionario del Dataset Crudo (Archivos CSV de DNRPA)
