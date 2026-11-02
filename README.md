@@ -17,6 +17,15 @@ El desarrollo se organiza bajo la estructura estándar de ciencia de datos **Coo
 ---
 
 ## 🔬 Consideraciones Metodológicas y Diseño del Dataset
+### Formulación de objetivos
+### Objetivo general:
+Desarrollar, entrenar y validar modelos de aprendizaje automático supervisado, para predecir la probabilidad de recupero de un automotor sustraído a partir de sus atributos técnicos y variables geográficas registrales.
+### Objetivos específicos:
+1. Adquisición y caracterización: Descargar y documentar formalmente el dataset público oficial de trámites de robos y recuperos desde el portal `datos.gob.ar`.
+2. Exploración de datos (EDA): Realizar un análisis exploratorio exhaustivo para analizar distribuciones, detectar valores nulos y examinar la tasa real de recuperos por provincia y tipo de vehículo.
+3. Análisis de características y prevención de Fuga (Data Leakage): Construir un flujo automatizado que aplique imputación, escalado y codificación.
+4. Entrenamiento y comparación de modelos: Implementar y ajustar al menos dos algoritmos supervisados con enfoques teóricos complementarios (lineal probabilístico vs. no paramétrico jerárquico).
+5. Evaluación rigurosa: Contrastar el rendimiento en un conjunto de prueba independiente y estratificado utilizando matrices de confusión y métricas sensibles al desbalance, interpretando los alcances reales del modelo sin asumir garantías absolutas de desempeño futuro.
 
 Para garantizar el rigor metodológico y la prevención de sesgos en el entrenamiento, se implementaron las siguientes decisiones de diseño en el Notebook 1 (`eda1.ipynb`):
 
@@ -38,6 +47,11 @@ Para garantizar el rigor metodológico y la prevención de sesgos en el entrenam
   * `automotor_tipo_descripcion` (Categórica: Sedán, Pick-up, Utilitario, Carga, etc.)
   * `registro_seccional_provincia` (Categórica: Provincia de radicación registral)
 * **Preprocesamiento Aislado:** Todas las transformaciones (imputación con `SimpleImputer`, escalado con `StandardScaler` y codificación con `OneHotEncoder`) se integran dentro de un `Pipeline` y un `ColumnTransformer` que se ajustan (`fit`) **exclusivamente sobre el conjunto de entrenamiento (X_train)**.
+### 5. Modelos preliminares propuestos
+a. Regresión logística:
+Funcionamiento: Estima la probabilidad continua de pertenecer a la clase recuperada a través de la combinación lineal ponderada de las características y la aplicación de la función sigmoide. Permite interpretar el impacto y dirección de cada variable mediante sus coeficientes beta.
+b. Árbol de decisión:
+Funcionamiento: Construye particiones lógicas recursivas evaluando umbrales de división que maximicen la pureza de los nodos. Se aplicarán hiperparámetros de poda previa para controlar y mitigar el sobreajuste.
 
 ### 🗂️ Diccionario del Dataset Crudo (Archivos CSV de DNRPA)
 
