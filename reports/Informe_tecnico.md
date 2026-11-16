@@ -177,11 +177,11 @@ Para evaluar la capacidad de generalización del `Pipeline` ajustado frente a fl
 ## 1. Conclusiones Principales sobre la Aplicación del Modelo
 
 * **Capacidad Discriminativa Moderada y Estable:**
-  * En el conjunto de prueba independiente ($X_{test}$), la Regresión Logística alcanzó un valor **ROC-AUC de 0,7580** [1], el cual se mantuvo en niveles similares al evaluarse sobre el conjunto de validación temporal del año 2025 (**0,7751**). 
+  * En el conjunto de prueba independiente ($X_{test}$), la Regresión Logística alcanzó un valor **ROC-AUC de 0,7580**, el cual se mantuvo en niveles similares al evaluarse sobre el conjunto de validación temporal del año 2025 (**0,7751**). 
   * Estos resultados sugieren que el modelo tiende a conservar una capacidad aceptable para diferenciar entre trámites registrales asociados a recuperos y los demás trámites de la flota, mostrando indicios de estabilidad probabilística sin evidencia de sobreajuste severo (*overfitting*).
 
 * **Captura de la Clase Minoritaria (Sensibilidad / Recall):**
-  * La incorporación de la ponderación `class_weight='balanced'` permitió elevar la sensibilidad del modelo, alcanzando un **Recall de 69,2% en $X_{test}$** [1] y de **68,6% en los datos de 2025**.
+  * La incorporación de la ponderación `class_weight='balanced'` permitió elevar la sensibilidad del modelo, alcanzando un **Recall de 69,2% en $X_{test}$**  y de **68,6% en los datos de 2025**.
   * Esto indica que el sistema muestra potencial para identificar aproximadamente 7 de cada 10 registros de recupero dentro de las muestras analizadas, lo que podría resultar de utilidad en contextos donde se priorice la detección temprana sobre la precisión estricta.
 
 * **Reproducibilidad y Prevención de Fuga de Información (*Data Leakage*):**
