@@ -85,7 +85,6 @@ El proyecto está estructurado siguiendo la plantilla estándar de ciencia de da
   * 📁 Dataset Nuevos_Datos Crudos: [`data/raw/`](data/raw/)(dnrpa-robos-recuperos-autos-202512.csv) (2.801 registros, 25 columnas)
   * 📁 Dataset Procesado: [`data/processed/dataset_recupero_automotores.csv`](data/processed/dataset_recupero_automotores.csv) (24.178 registros, 5 columnas).
   * 📁 Reports: Informe_tecnico.md (Informe técnico del modelo y prueba) 
-```
 
 ## Enlace al video explicativo del proyecto
 
