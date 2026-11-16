@@ -87,6 +87,7 @@ El proyecto está estructurado siguiendo la plantilla estándar de ciencia de da
   * 📁 Reports: Informe_tecnico.md (Informe técnico del modelo y prueba) 
 
 ## Enlace al video explicativo del proyecto
+https://youtu.be/ueRSFsWDXSo
 
 
 
